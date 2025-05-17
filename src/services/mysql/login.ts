@@ -17,7 +17,7 @@ export const login = async (
 ): Promise<LoginResponse> => {
   try {
     const response = await axiosInstance.post<LoginResponse>(
-      "/mysql/login",
+      "mysql/login",
       credentials,
       {
         // Impede que respostas de erro (como 401) lancem exceções

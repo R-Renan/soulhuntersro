@@ -8,7 +8,7 @@ export async function setRoleReaction(
   emoji: string,
   userId?: string // opcional por enquanto
 ) {
-  const { data } = await axios.post(`/role-reaction/${SERVER_ID}`, {
+  const { data } = await axios.post(`role-reaction/${SERVER_ID}`, {
     channelId,
     messageId,
     roleId,

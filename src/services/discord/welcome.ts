@@ -1,7 +1,7 @@
 import axios from "../axios";
 import { SERVER_ID } from "../env";
 
-const WELCOME_PATH = `/welcome-config/${SERVER_ID}`;
+const WELCOME_PATH = `welcome-config/${SERVER_ID}`;
 
 export async function getWelcomeConfig() {
   const { data } = await axios.get(WELCOME_PATH);

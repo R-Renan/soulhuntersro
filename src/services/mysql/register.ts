@@ -17,7 +17,7 @@ export const register = async (
 ): Promise<RegisterResponse> => {
   try {
     const response = await axiosInstance.post<RegisterResponse>(
-      "/mysql/register", // 🔧 Use /mysql/register, se a rota for essa
+      "mysql/register", // 🔧 Use /mysql/register, se a rota for essa
       data
     );
     return response.data;

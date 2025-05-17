@@ -2,7 +2,7 @@ import axios from "../axios";
 import { SERVER_ID } from "../env";
 import type { Member } from "../../types/discord";
 
-const MEMBERS_PATH = `/members/${SERVER_ID}`;
+const MEMBERS_PATH = `members/${SERVER_ID}`;
 
 export async function getMembers(): Promise<Member[]> {
   const { data } = await axios.get<Member[]>(MEMBERS_PATH);
