@@ -1,7 +1,7 @@
 import Header from "./components/Header";
 import Body from "./components/Body";
 import Footer from "./components/Footer";
-// import StaffDiscord from "./components/Dashboard/StaffDiscord";
+import StaffDiscord from "./components/Dashboard/StaffDiscord";
 // import Dashboard from "./components/Dashboard/Dashboard";
 // import DailyItens from "./components/Dashboard/DailyItem";
 import ParticlesBackground from "./components/Particles";
@@ -30,7 +30,7 @@ function App() {
 
             {/* <DailyItens /> */}
             {/* <Dashboard /> */}
-            {/* <StaffDiscord /> */}
+            <StaffDiscord />
           </div>
           <Footer />
         </div>
