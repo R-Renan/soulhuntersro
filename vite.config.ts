@@ -8,13 +8,4 @@ export default defineConfig({
     outDir: "dist",
     emptyOutDir: true,
   },
-  server: {
-    proxy: {
-      "/api": {
-        target: "https://connect.soulhunters.site:3636",
-        changeOrigin: true,
-        secure: false, // Ignora erros de certificado
-      },
-    },
-  },
 });
