@@ -1,6 +1,6 @@
-import React, { useState, useCallback } from "react";
-import { FaThumbsUp, FaThumbsDown } from "react-icons/fa";
-import { setRoleReaction } from "../../services/discord";
+import React from "react";
+// import { FaThumbsUp, FaThumbsDown } from "react-icons/fa";
+// import { setRoleReaction } from "../../services/discord";
 
 interface Message {
   id: string;
@@ -19,34 +19,34 @@ const PostCard: React.FC<Message & { messageId: string }> = ({
   author,
   content,
   attachments,
-  messageId,
+  // messageId,
   timestamp,
 }) => {
-  const [likes, setLikes] = useState(0);
-  const [dislikes, setDislikes] = useState(0);
+  // const [likes, setLikes] = useState(0);
+  // const [dislikes, setDislikes] = useState(0);
 
   // Apenas incrementa contadores locais
-  const handleLikeDislike = (type: "like" | "dislike") => {
-    if (type === "like") setLikes((prev) => prev + 1);
-    if (type === "dislike") setDislikes((prev) => prev + 1);
-  };
+  // const handleLikeDislike = (type: "like" | "dislike") => {
+  //   if (type === "like") setLikes((prev) => prev + 1);
+  //   if (type === "dislike") setDislikes((prev) => prev + 1);
+  // };
 
   // Apenas usado pelo botão Participar
-  const handleReact = useCallback(async () => {
-    try {
-      await setRoleReaction(
-        "CHANNEL_ID_AQUI",
-        messageId,
-        "ROLE_ID_AQUI",
-        "🔥",
-        "123456789012345678"
-      );
-      alert("Reação registrada e cargo atribuído!");
-    } catch (err) {
-      console.error(err);
-      alert("Erro ao atribuir cargo.");
-    }
-  }, [messageId]);
+  // const handleReact = useCallback(async () => {
+  //   try {
+  //     await setRoleReaction(
+  //       "CHANNEL_ID_AQUI",
+  //       messageId,
+  //       "ROLE_ID_AQUI",
+  //       "🔥",
+  //       "123456789012345678"
+  //     );
+  //     alert("Reação registrada e cargo atribuído!");
+  //   } catch (err) {
+  //     console.error(err);
+  //     alert("Erro ao atribuir cargo.");
+  //   }
+  // }, [messageId]);
 
   return (
     <>
@@ -102,7 +102,7 @@ const PostCard: React.FC<Message & { messageId: string }> = ({
         )}
 
         {/* Botões de reação */}
-        <div className="flex items-center justify-between border-t border-gray-700/50 pt-3">
+        {/* <div className="flex items-center justify-between border-t border-gray-700/50 pt-3">
           <div className="flex items-center gap-4">
             <button
               onClick={() => handleLikeDislike("like")}
@@ -130,7 +130,7 @@ const PostCard: React.FC<Message & { messageId: string }> = ({
             <span className="text-lg">🔥</span>
             <span className="text-sm">Participar</span>
           </button>
-        </div>
+        </div> */}
       </div>
     </>
   );

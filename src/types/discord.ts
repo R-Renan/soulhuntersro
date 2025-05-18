@@ -35,3 +35,12 @@ export interface ApiResponse<T> {
   data: T;
   error?: string;
 }
+
+export interface ServerInfo {
+  id: string;
+  name: string;
+  icon: string | null;
+  owner: string;
+  createdAt: string;
+  features: string[];
+}

@@ -4,6 +4,7 @@ interface LoginResponse {
   success: boolean;
   token?: string;
   user?: { userid: string; email: string; level: number };
+  ticketCode?: string;
   error?: string;
 }
 
@@ -20,7 +21,6 @@ export const login = async (
       "mysql/login",
       credentials,
       {
-        // Impede que respostas de erro (como 401) lancem exceções
         validateStatus: (status) => status >= 200 && status < 600,
       }
     );

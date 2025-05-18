@@ -5,3 +5,16 @@ body {
   margin: 0;
   padding: 0;
 }
+
+a:not([href]),
+span,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+  cursor: default;
+}

@@ -16,24 +16,33 @@ type Noticia = {
 const noticias: Noticia[] = [
   {
     titulo: "Atualização",
-    data: "12 de Maio de 2025",
+    data: "17 de Maio de 2025",
     descricao: [
-      { tipo: "texto", texto: "Correção de Bugs" },
-      { tipo: "texto", texto: "Correção de Quest" },
-      { tipo: "texto", texto: "Correção de Habilidades" },
-      { tipo: "texto", texto: "Correção de Portais" },
-      { tipo: "texto", texto: "Correção de Itens" },
+      {
+        tipo: "npc",
+        texto: "Atualização de Itens (Download)",
+        valor:
+          "https://drive.google.com/file/d/1gk2v4x5j7f3e8z5gk2v4x5j7f3e8z5g/view",
+        tooltip: "Clique para copiar",
+      },
+      { tipo: "texto", texto: "Registro habilitados para membros do clã!" },
+      {
+        tipo: "texto",
+        texto:
+          "Visual todo dia! Itens da semana disponiveis. Começa em 19/05/2025",
+      },
     ],
   },
   {
     titulo: "Atualização",
-    data: "11 de Maio de 2025",
+    data: "15 de Maio de 2025",
     descricao: [
-      { tipo: "texto", texto: "Correção de Bugs" },
-      { tipo: "texto", texto: "Correção de Quest" },
-      { tipo: "texto", texto: "Correção de Habilidades" },
-      { tipo: "texto", texto: "Correção de Portais" },
-      { tipo: "texto", texto: "Correção de Itens" },
+      {
+        tipo: "texto",
+        texto: "Vendedores Souls - Novos itens para cada classe.",
+      },
+      { tipo: "texto", texto: "Equipamentos de Guerra - Rubi & Equip c/Slot." },
+      { tipo: "texto", texto: "Redução de Dano GvG e BG" },
     ],
   },
   {
@@ -44,7 +53,7 @@ const noticias: Noticia[] = [
         tipo: "npc",
         texto: "NPC Velha Sábia (Removedor de Cartas)",
         valor: "/navi payon 125/111",
-        tooltip: "Clique para copiar localização",
+        tooltip: "Clique para copiar",
       },
       { tipo: "texto", texto: "Login Diário ~ Em breve" },
     ],
@@ -124,10 +133,10 @@ const Notices: React.FC = () => {
                   <li key={idx} className="flex items-center gap-2">
                     {desc.tipo === "npc" ? (
                       <>
-                        {desc.texto}
+                        • {desc.texto}
                         {desc.valor && (
                           <button
-                            title={desc.tooltip ?? "Copiar localização"}
+                            title={desc.tooltip ?? "Copiar"}
                             className="text-cyan-400 hover:text-cyan-200"
                             onClick={() => copiar(desc.valor!)}
                           >
@@ -136,7 +145,7 @@ const Notices: React.FC = () => {
                         )}
                       </>
                     ) : (
-                      desc.texto
+                      "• " + desc.texto
                     )}
                   </li>
                 ))}

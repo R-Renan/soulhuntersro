@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { GrAnnounce } from "react-icons/gr";
-import { getMessages } from "../../services/discord";
+import { getDefaultMessages } from "../../services/discord";
 import PostCard from "./Postcard";
 
 interface Message {
@@ -28,7 +28,7 @@ const DiscordFeed: React.FC = () => {
     const fetchMessages = async () => {
       setLoading(true);
       try {
-        const data = await getMessages();
+        const data = await getDefaultMessages();
         setMessages(data);
       } catch (err) {
         console.error(err);
@@ -50,7 +50,6 @@ const DiscordFeed: React.FC = () => {
   return (
     <section className="text-white px-4 sm:px-0">
       <div className="max-w-4xl mx-auto flex flex-col">
-        {/* Título */}
         <h2 className="text-xl md:text-2xl font-bold text-center mb-6 text-cyan-400 drop-shadow">
           <div className="flex justify-center items-center gap-3 border-b border-cyan-400/20 pb-2">
             <GrAnnounce />
@@ -58,7 +57,6 @@ const DiscordFeed: React.FC = () => {
           </div>
         </h2>
 
-        {/* Estados de carregamento / erro / vazio */}
         {loading && (
           <p className="text-gray-400 text-base text-center">
             Carregando mensagens...
@@ -73,7 +71,6 @@ const DiscordFeed: React.FC = () => {
           </p>
         )}
 
-        {/* Mensagens renderizadas */}
         {!loading && !error && paginatedMessages.length > 0 && (
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
             {paginatedMessages.map((message, i) => (
@@ -89,7 +86,6 @@ const DiscordFeed: React.FC = () => {
           </div>
         )}
 
-        {/* Paginação */}
         {totalPages > 1 && (
           <div className="flex justify-center gap-2 mt-6 sm:mt-8">
             {Array.from({ length: totalPages }, (_, index) => {

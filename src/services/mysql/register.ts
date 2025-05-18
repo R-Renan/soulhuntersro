@@ -3,6 +3,7 @@ import axiosInstance from "../axios";
 interface RegisterResponse {
   success: boolean;
   message?: string;
+  ticketCode?: string;
   error?: string;
 }
 
@@ -17,7 +18,7 @@ export const register = async (
 ): Promise<RegisterResponse> => {
   try {
     const response = await axiosInstance.post<RegisterResponse>(
-      "mysql/register", // 🔧 Use /mysql/register, se a rota for essa
+      "mysql/register",
       data
     );
     return response.data;
