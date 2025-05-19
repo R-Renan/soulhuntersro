@@ -16,13 +16,29 @@ type Noticia = {
 const noticias: Noticia[] = [
   {
     titulo: "Atualização",
+    data: "18 de Maio de 2025",
+    descricao: [
+      { tipo: "texto", texto: "Ticket para Aprovação de Login" },
+      {
+        tipo: "texto",
+        texto:
+          "Visual todo dia! Itens da semana disponiveis. Começa em 19/05/2025",
+      },
+      {
+        tipo: "texto",
+        texto: "Sugestões do servidor concluídas! Tudo foi adicionado.",
+      },
+    ],
+  },
+  {
+    titulo: "Atualização",
     data: "17 de Maio de 2025",
     descricao: [
       {
         tipo: "npc",
         texto: "Atualização de Itens (Download)",
         valor:
-          "https://drive.google.com/file/d/1gk2v4x5j7f3e8z5gk2v4x5j7f3e8z5g/view",
+          "https://drive.google.com/file/d/1FwfAui6mpFYVw3n9ar7iUrdszurcMKgk/view?usp=sharing",
         tooltip: "Clique para copiar",
       },
       { tipo: "texto", texto: "Registro habilitados para membros do clã!" },
