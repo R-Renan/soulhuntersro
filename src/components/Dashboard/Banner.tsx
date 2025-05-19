@@ -25,7 +25,7 @@ const Banner: React.FC = () => {
         </span>
       </p>
       <a
-        href="discord://discord.com/channels/1125412537308024904/1358981389755748455"
+        href="https://discord.com/channels/1125412537308024904/1358981389755748455"
         target="_blank"
         rel="noopener noreferrer"
         className="px-3 sm:px-4 py-1 sm:py-2 bg-gradient-to-r from-cyan-600/50 to-cyan-500/50 border border-cyan-400/30 text-cyan-100 rounded-lg text-xs sm:text-sm hover:from-cyan-500/60 hover:to-cyan-400/60 transition-all duration-300 shadow-md hover:shadow-cyan-500/40 hover:scale-105"
