@@ -48,7 +48,7 @@ const Body: React.FC = () => {
             <a
               href={
                 isLoggedIn
-                  ? "https://drive.google.com/file/d/1sipL3a2MOJq6o6w_ku1Yie_ZwvsxkfzZ/view?usp=sharing"
+                  ? "https://drive.google.com/file/d/1FwfAui6mpFYVw3n9ar7iUrdszurcMKgk/view?usp=sharing"
                   : "#"
               }
               onClick={(e) => {
@@ -67,11 +67,7 @@ const Body: React.FC = () => {
             </a>
 
             <a
-              href={
-                isLoggedIn
-                  ? "https://drive.google.com/file/d/1sipL3a2MOJq6o6w_ku1Yie_ZwvsxkfzZ/view?usp=sharing"
-                  : "#"
-              }
+              href={isLoggedIn ? "/" : "#"}
               onClick={(e) => {
                 if (!isLoggedIn) {
                   e.preventDefault();
